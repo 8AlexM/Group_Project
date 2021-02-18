@@ -7,13 +7,16 @@ import java.util.Scanner;
  */
 abstract class AbstractTopic
 {
-   protected String topic;
    public Scanner scanner;
+   protected String topic;
    public int topicScore;
    //a list to store all the questions and answers for this round
    public ArrayList<QuestionAndAnswer> questionsAndAnswers;
 
    public AbstractTopic(){
+      this.questionsAndAnswers = new ArrayList<>();
+      this.topicScore = 0;
+      this.scanner = new Scanner(System.in);
    }//default constructor
 
 
